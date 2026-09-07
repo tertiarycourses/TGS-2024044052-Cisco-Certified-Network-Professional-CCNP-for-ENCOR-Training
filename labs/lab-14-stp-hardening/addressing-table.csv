@@ -1,0 +1,6 @@
+Port,Switch,Role,Feature Applied,Expected Behaviour
+F0/1,S1,Access / edge,PortFast + BPDU guard,Instant forwarding; err-disable on any BPDU
+F0/2,S1,Access / edge,PortFast + BPDU guard,Instant forwarding; err-disable on any BPDU
+G0/1,S1,Uplink to distribution,Root guard,Root-inconsistent on a superior BPDU
+G0/2,S1,Uplink to distribution,Root guard + loop guard,Protected against rogue root and unidirectional link
+F0/24,S1,Rogue switch port,PortFast + BPDU guard,Test port — plug the rogue switch here

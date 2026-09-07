@@ -1,0 +1,8 @@
+Test,Source,Destination,Protocol/Port,Expected,ACL Line That Decides
+1,10.5.5.5 (spoofed),172.22.34.62,any,DENY,deny ip 10.0.0.0 0.255.255.255 any
+2,192.168.99.9 (spoofed),172.22.34.62,any,DENY,deny ip 192.168.0.0 0.0.255.255 any
+3,203.0.113.20,172.22.34.62,TCP 80,PERMIT,permit tcp any host 172.22.34.62 eq 80
+4,203.0.113.20,172.22.34.62,TCP 443,PERMIT,permit tcp any host 172.22.34.62 eq 443
+5,203.0.113.20,172.22.34.62,TCP 22,DENY,implicit deny (logged)
+6,203.0.113.20,172.22.34.66,ICMP echo,DENY,deny icmp any any echo
+7,172.22.34.66,203.0.113.20,TCP established,PERMIT,permit tcp any any established

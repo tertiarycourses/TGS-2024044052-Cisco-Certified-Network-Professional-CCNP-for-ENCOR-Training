@@ -1,0 +1,8 @@
+Device,Interface,IP Address,Subnet Mask,VLAN,Notes
+S1,VLAN 99,192.168.99.1,255.255.255.0,99,"Management, native VLAN"
+S2,VLAN 99,192.168.99.2,255.255.255.0,99,"Management, native VLAN"
+S3,VLAN 99,192.168.99.3,255.255.255.0,99,"Management, native VLAN"
+PC0,NIC,192.168.10.1,255.255.255.0,10,Unaffected user
+PC1,NIC,192.168.20.1,255.255.255.0,20,AFFECTED — cannot reach server
+PC2,NIC,192.168.30.1,255.255.255.0,30,Unaffected user
+Server,NIC,192.168.20.100,255.255.255.0,20,File server for VLAN 20

@@ -1,0 +1,9 @@
+Node,YANG Type,Parent,Data Type,Purpose
+interfaces,container,(root),—,Groups all interface configuration
+interface,list (key: name),interfaces,—,Repeats once per interface
+name,leaf,interface,string,The interface name — the list key
+description,leaf,interface,string,Free-text description
+type,leaf,interface,identityref,"ethernetCsmacd, softwareLoopback, etc"
+enabled,leaf,interface,boolean,Administrative state
+ipv4,container,interface,—,Groups the IPv4 configuration
+address,list (key: ip),ipv4,—,Repeats per address on the interface

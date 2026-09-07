@@ -1,0 +1,8 @@
+Device,Interface,IP Address,Subnet Mask,Default Gateway,Notes
+R1,G0/0,172.22.34.65,255.255.255.224,N/A,User segment 1
+R1,G0/1,172.22.34.97,255.255.255.240,N/A,User segment 2
+R1,G0/2,172.22.34.1,255.255.255.192,N/A,Server segment
+R1,S0/0/0,209.165.200.226,255.255.255.224,N/A,Internet edge — ACL applied inbound
+Server,NIC,172.22.34.62,255.255.255.192,172.22.34.1,"Web server, HTTP/HTTPS permitted"
+PC1,NIC,172.22.34.66,255.255.255.224,172.22.34.65,Internal user
+PC2,NIC,172.22.34.98,255.255.255.240,172.22.34.97,Internal user

@@ -1,0 +1,9 @@
+Component,Solution,Plane,If It Fails,Data Plane Still Forwards?
+vBond,SD-WAN,Orchestration,No new devices can onboard or be authenticated,yes
+vSmart,SD-WAN,Control,No new OMP routes or policy are distributed,yes
+vManage,SD-WAN,Management,"No GUI, API, templates or monitoring",yes
+cEdge,SD-WAN,Data,That site loses connectivity,"no, for that site"
+Control plane node,SD-Access,Control,No new EID-to-RLOC resolution; cached entries still work,"yes, for cached"
+Border node,SD-Access,Border,No traffic in or out of the fabric,"no, for external"
+Edge node,SD-Access,Edge,Endpoints on that switch lose connectivity,"no, for that switch"
+DNA Center,SD-Access,Management,No provisioning or assurance; fabric keeps forwarding,yes

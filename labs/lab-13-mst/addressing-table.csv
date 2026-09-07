@@ -1,0 +1,4 @@
+MST Instance,VLAN Range,Root Switch,Secondary,Notes
+Instance 0 (IST),Unmapped VLANs,S1,S2,The internal spanning tree
+Instance 1,1-100,S1,S2,First half of the campus VLANs
+Instance 2,101-200,S2,S1,Second half — load distribution

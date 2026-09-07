@@ -1,0 +1,10 @@
+HTTP Code,Meaning,What Went Wrong,What To Do
+200,OK,Nothing — the request succeeded,Parse the response body
+201,Created,The resource was created,Read the Location header for its URI
+204,No Content,"Succeeded, nothing to return",Common after a DELETE
+400,Bad Request,Malformed syntax or invalid JSON,Validate the payload before sending
+401,Unauthorized,"Token missing, wrong or expired",Request a new token
+403,Forbidden,Token is valid but the account lacks permission,"Fix the account's role, not the token"
+404,Not Found,The URI does not exist,Check the endpoint path and the API version
+429,Too Many Requests,You exceeded the rate limit,"Back off and retry, honouring Retry-After"
+500,Internal Server Error,The server failed,"Retry; if persistent, it is not your script"

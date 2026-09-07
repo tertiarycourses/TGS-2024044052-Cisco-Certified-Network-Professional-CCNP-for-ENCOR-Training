@@ -1,0 +1,6 @@
+Device,Interface,IP Address,Protocol,Port,Notes
+R1,G0/0,192.168.1.1,NETCONF,830,netconf-yang over SSH
+R1,G0/0,192.168.1.1,RESTCONF,443,"HTTPS REST, JSON or XML"
+R1,G0/0,192.168.1.1,SSH,22,CLI management
+Admin PC,NIC,192.168.1.50,Client,N/A,"Runs curl, Postman and the Python scripts"
+DNAC (sandbox),N/A,sandboxdnac.cisco.com,HTTPS,443,Cisco DevNet always-on sandbox

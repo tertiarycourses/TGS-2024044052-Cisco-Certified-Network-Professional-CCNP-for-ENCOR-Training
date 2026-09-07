@@ -1,0 +1,9 @@
+Device,Interface,IP Address,Subnet Mask,AS Number,Notes
+ACME1,G0/0,192.168.0.1,255.255.255.0,65001,Customer LAN
+ACME1,S0/0/0,1.1.1.2,255.255.255.252,65001,eBGP peer to ISP-Entry-1
+ACME1,S0/0/1,1.1.1.6,255.255.255.252,65001,eBGP peer to ISP-Entry-2
+ISP-Entry-1,S0/0/0,1.1.1.1,255.255.255.252,65000,Primary provider entry
+ISP-Entry-1,S0/0/1,1.1.1.5,255.255.255.252,65000,Secondary link
+ISP-Entry-2,S0/0/0,1.1.1.9,255.255.255.252,65000,Second provider entry
+OtherCo1,G0/0,172.16.10.1,255.255.255.0,65002,Remote AS to reach
+Server,NIC,172.16.10.2,255.255.255.0,N/A,Reachability test target

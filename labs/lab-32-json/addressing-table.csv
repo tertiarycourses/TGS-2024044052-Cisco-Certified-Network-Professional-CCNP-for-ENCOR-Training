@@ -1,0 +1,8 @@
+Field,JSON Type,Example Value,Valid,Common Error
+hostname,string,"""R1-CORE""",yes,Single quotes instead of double
+mgmt_ip,string,"""10.1.1.1""",yes,Unquoted key
+uptime_days,number,412,yes,Quoting a number is legal but changes the type
+enabled,boolean,true,yes,"Capitalised True — that is Python, not JSON"
+last_error,null,null,yes,"Using None — that is Python, not JSON"
+interfaces,array,"[{...},{...}]",yes,Trailing comma after the last element
+location,object,"{""site"":""HQ""}",yes,A // comment anywhere in the file

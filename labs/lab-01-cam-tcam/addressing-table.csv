@@ -1,0 +1,6 @@
+Device,Interface,IP Address,Subnet Mask,VLAN,Notes
+S1,VLAN 10,192.168.10.2,255.255.255.0,10,Access switch under test
+S2,VLAN 10,192.168.10.3,255.255.255.0,10,Second access switch
+PC-A,NIC,192.168.10.10,255.255.255.0,10,"MAC 000c.1234.5678, port F0/1"
+PC-B,NIC,192.168.10.20,255.255.255.0,10,"MAC 000c.8765.4321, port F0/2"
+R1,G0/0,192.168.10.1,255.255.255.0,10,Default gateway

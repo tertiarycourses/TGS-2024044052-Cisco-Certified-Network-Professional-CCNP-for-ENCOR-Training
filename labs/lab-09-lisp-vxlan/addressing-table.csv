@@ -1,0 +1,7 @@
+Component,Role,EID / RLOC,VNI / Address,Notes
+Host-A,Endpoint,EID 10.10.10.10,VNI 10001,Roams between edge nodes
+Edge-1,Edge node / xTR,RLOC 10.100.1.11,VNI 10001,Host-A's original attachment
+Edge-2,Edge node / xTR,RLOC 10.100.1.12,VNI 10001,Host-A's attachment after the roam
+CP-Node-1,Map server / resolver,10.100.1.1,N/A,Holds the EID-to-RLOC bindings
+Border-1,Border node,10.100.1.2,N/A,Fabric exit to the rest of the network
+Host-B,Endpoint,EID 10.10.20.20,VNI 10002,"Different VNI, no L2 adjacency to Host-A"

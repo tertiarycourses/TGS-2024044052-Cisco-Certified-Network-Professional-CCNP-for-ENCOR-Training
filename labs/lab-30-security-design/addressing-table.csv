@@ -1,0 +1,6 @@
+Use Case,Recommended Method,Why,Notes
+Corporate laptops,802.1X with EAP-TLS,"Certificate-based, strongest identity, no shared secret",Requires PKI and a supplicant
+Guest Wi-Fi,WebAuth captive portal,"No credential distribution, acceptable-use acceptance",Weak identity — segment guests away
+Contractor devices,802.1X with PEAP-MSCHAPv2,Username and password against RADIUS/AD,"Simpler than EAP-TLS, no client certificate"
+IP cameras and printers,MAB with device profiling,Cannot run a supplicant,MAC is spoofable — always pair with profiling
+"Small branch, no RADIUS",WPA2/WPA3 PSK,No server infrastructure needed,Rotate the key; every device shares it

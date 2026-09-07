@@ -1,0 +1,7 @@
+Device,Role,Management IP,Subnet Mask,Building,Notes
+SW-ACC-1,Access,10.10.1.11,255.255.255.0,A,24 x PoE edge ports
+SW-ACC-2,Access,10.10.1.12,255.255.255.0,A,24 x PoE edge ports
+SW-DIST-1,Distribution,10.10.1.1,255.255.255.0,A,"L2/L3 boundary, HSRP active"
+SW-DIST-2,Distribution,10.10.1.2,255.255.255.0,A,"L2/L3 boundary, HSRP standby"
+SW-ACC-3,Access,10.10.2.11,255.255.255.0,B,Merged company
+SW-DIST-3,Distribution,10.10.2.1,255.255.255.0,B,Merged company

@@ -1,0 +1,4 @@
+Channel Group,Switches,Member Ports,Protocol,Expected Mode,Fault Injected
+Po1,S1 – S3,"F0/21, F0/22",PAgP,desirable / auto,Speed and duplex mismatch on F0/22
+Po2,S1 – S2,"G0/1, G0/2",LACP,active / passive,Both ends left passive
+Po3,S2 – S3,"F0/23, F0/24",LACP,active / active,"PAgP on one end, LACP on the other"

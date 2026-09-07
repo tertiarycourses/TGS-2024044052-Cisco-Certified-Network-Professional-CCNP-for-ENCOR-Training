@@ -1,0 +1,4 @@
+Fault,Reported Symptom,Where To Look (GUI),Root Cause,Fix,Verified By
+1,User cannot see the SSID,WLANs > WLAN > General and Advanced,WLAN disabled and SSID broadcast off,Enable the WLAN and enable Broadcast SSID,Client sees the SSID in its scan list
+2,Associates but gets no IP address,"WLANs > Interface, Controller > Interfaces",WLAN mapped to the wrong dynamic interface / VLAN,Remap the WLAN to the VLAN 5 interface,ipconfig shows a 192.168.5.x address
+3,Authentication fails on corporate SSID,Security > AAA > RADIUS > Authentication,RADIUS shared secret does not match the server,Re-enter the shared secret on the WLC,Client appears under Monitor > Clients

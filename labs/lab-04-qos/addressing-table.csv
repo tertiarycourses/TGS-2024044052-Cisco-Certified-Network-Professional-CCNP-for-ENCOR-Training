@@ -1,0 +1,7 @@
+Device,Interface,IP Address,Subnet Mask,Notes
+R1,G0/0,192.168.1.1,255.255.255.0,LAN with IP phones
+R1,S0/0/0,10.1.1.1,255.255.255.252,"WAN, QoS applied outbound"
+SW-1,VLAN 1,192.168.1.2,255.255.255.0,"Access switch, trust boundary"
+IP Phone,NIC,192.168.100.10,255.255.255.0,"Voice VLAN 100, marks DSCP EF"
+PC-A,NIC,192.168.1.10,255.255.255.0,"Data VLAN 1, behind the phone"
+WLC-1,Management,192.168.200.254,255.255.255.0,Wireless QoS / WMM mapping

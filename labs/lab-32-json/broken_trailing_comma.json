@@ -1,0 +1,6 @@
+{
+  "devices": [
+    { "hostname": "R1-CORE", "mgmt_ip": "10.1.1.1" },
+    { "hostname": "SW1-ACC", "mgmt_ip": "10.1.2.11" },
+  ]
+}

@@ -1,0 +1,7 @@
+Header,Field,Size (bytes),Purpose
+Outer Ethernet,Dst/Src MAC + type,14,Next-hop delivery in the underlay
+Outer IP,Src/Dst RLOC,20,Routed across the underlay
+Outer UDP,"Src port (hash), Dst port 4789",8,Enables ECMP; 4789 identifies VXLAN
+VXLAN,Flags + 24-bit VNI + reserved,8,"Identifies the segment — 16,777,216 possible"
+Original frame,The encapsulated Layer 2 frame,varies,The payload being transported
+TOTAL OVERHEAD,,50,Underlay MTU must be at least 1550

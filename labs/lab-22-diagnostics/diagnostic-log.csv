@@ -1,0 +1,8 @@
+Test,Command,Result,What It Tells You
+Basic ping,ping 192.168.3.3,Success,Layer 3 reachability exists
+Sourced ping,ping 192.168.3.3 source g0/1,Success,The LAN source is routable too
+"Large ping, DF set",ping 192.168.3.3 size 1500 df-bit,Fail,Something on the path cannot carry 1500 bytes
+Sweep 1400,ping 192.168.3.3 size 1400,Success,1400 fits — the limit is between 1400 and 1500
+Sweep 1450,ping 192.168.3.3 size 1450,Fail,The limit is between 1400 and 1450
+Traceroute,traceroute 192.168.3.3,Completes,"The path itself is intact — this is an MTU issue, not a routing issue"
+Interface MTU,show interfaces s0/0/0,MTU 1400,ROOT CAUSE: R1 S0/0/0 MTU was set to 1400

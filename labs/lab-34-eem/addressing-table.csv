@@ -1,0 +1,5 @@
+Applet,Event Detector,Trigger,Actions,Purpose
+INTERFACE-DOWN,syslog,Pattern: Serial0/0/0 changed state to down,"show interfaces, show ip route, syslog msg",Capture state at the moment of failure
+HEALTH-CHECK,timer watchdog,Every 300 seconds,"show processes cpu, syslog msg",Periodic health snapshot
+CONFIG-CHANGE,syslog,Pattern: CONFIG_I configured from,"show running-config, syslog msg",Record what changed and when
+HIGH-CPU,snmp,CPU above 80%,"show processes cpu sorted, syslog msg",Catch the process responsible

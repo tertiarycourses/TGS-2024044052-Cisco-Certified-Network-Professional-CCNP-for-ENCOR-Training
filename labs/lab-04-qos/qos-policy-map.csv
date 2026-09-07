@@ -1,0 +1,7 @@
+Traffic Class,Expected DSCP,Configured DSCP,802.11e UP (WMM),Correct?,Symptom
+Voice bearer,EF (46),EF (46),6 — Voice,yes,—
+Call signalling,CS3 (24),CS3 (24),4 — Video,yes,—
+Video conferencing,AF41 (34),AF41 (34),5 — Video,yes,—
+Wireless voice,EF (46),AF21 (18),2 — Background,NO,Voice queued as background — audio breaks up under load
+Best effort data,DF (0),DF (0),0 — Best Effort,yes,—
+Scavenger,CS1 (8),CS1 (8),1 — Background,yes,—

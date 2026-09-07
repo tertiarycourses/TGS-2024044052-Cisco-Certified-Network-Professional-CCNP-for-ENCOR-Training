@@ -1,0 +1,36 @@
+// Extract from the ietf-interfaces YANG model (RFC 8343), trimmed for teaching.
+// Identify: which node is a CONTAINER, which is a LIST (and what is its key),
+// and which are LEAVES (and what type does each hold)?
+
+module ietf-interfaces {
+  namespace "urn:ietf:params:xml:ns:yang:ietf-interfaces";
+  prefix if;
+
+  container interfaces {              // CONTAINER - groups, does not repeat
+    list interface {                  // LIST      - repeats, one per interface
+      key "name";                     //             its KEY is 'name'
+
+      leaf name {                     // LEAF      - one typed value
+        type string;
+      }
+      leaf description {
+        type string;
+      }
+      leaf type {
+        type identityref { base interface-type; }
+        mandatory true;
+      }
+      leaf enabled {
+        type boolean;                 // LEAF of type boolean
+        default "true";
+      }
+      container ipv4 {                // nested CONTAINER
+        list address {                // nested LIST, key 'ip'
+          key "ip";
+          leaf ip      { type inet:ipv4-address; }
+          leaf netmask { type yang:dotted-quad; }
+        }
+      }
+    }
+  }
+}

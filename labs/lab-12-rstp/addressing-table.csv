@@ -1,0 +1,5 @@
+Device,Bridge Priority,MAC Address,Role Before,Role After,Notes
+S1,32769,0001.aaaa.1111,Non-root,ROOT (priority 4096),Intended root bridge
+S2,32769,0002.bbbb.2222,Non-root,Secondary root (28672),Intended backup root
+S3,32769,0003.cccc.3333,ROOT (wrong),Non-root,"Access switch, wrongly root"
+PC-A,N/A,000c.dddd.4444,N/A,N/A,Used to time convergence

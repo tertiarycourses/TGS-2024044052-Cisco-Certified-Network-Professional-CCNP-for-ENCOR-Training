@@ -1,0 +1,8 @@
+Criterion,2-Tier (Collapsed Core),3-Tier (Dedicated Core),Which wins for the merged network
+Devices required,4,6,2-tier
+Inter-block links (4 blocks),6 (full mesh),4 (one uplink each),3-tier
+Cost,Lower,Higher,2-tier
+Convergence on failure,Slower — more paths to recompute,"Faster — fewer, simpler paths",3-tier
+Scalability beyond 3 blocks,Poor — mesh grows as n(n-1)/2,Good — grows linearly,3-tier
+Operational simplicity,Fewer devices to manage,Clear separation of roles,Tie
+Recommendation,Single building only,"Four buildings, 2,400 staff",3-TIER

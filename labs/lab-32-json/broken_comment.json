@@ -1,0 +1,7 @@
+{
+  // JSON does not allow comments - this is the error
+  "site": "Singapore HQ",
+  "devices": [
+    { "hostname": "R1-CORE" }
+  ]
+}

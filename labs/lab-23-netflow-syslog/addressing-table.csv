@@ -1,0 +1,7 @@
+Device,Interface,IP Address,Subnet Mask,Role,Notes
+R1,G0/0,192.168.1.1,255.255.255.0,Monitored device,NetFlow monitor applied inbound
+R1,S0/0/0,10.1.1.1,255.255.255.252,Monitored device,WAN link
+R2,S0/0/0,10.1.1.2,255.255.255.252,Monitored device,Second device
+Syslog Server,NIC,192.168.1.100,255.255.255.0,Collector,Syslog and NetFlow collector
+SNMP Server,NIC,192.168.1.101,255.255.255.0,Collector,SNMPv3 poller
+NTP Source,NIC,209.165.200.226,255.255.255.0,Time source,Stratum 3 master

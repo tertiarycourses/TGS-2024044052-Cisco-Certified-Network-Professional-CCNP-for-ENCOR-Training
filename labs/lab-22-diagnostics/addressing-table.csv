@@ -1,0 +1,9 @@
+Device,Interface,IP Address,Subnet Mask,MTU,Notes
+R1,G0/1,192.168.1.1,255.255.255.0,1500,Source of the diagnostics
+R1,S0/0/0,10.1.1.1,255.255.255.252,1400,MTU reduced — the injected fault
+R2,S0/0/0,10.1.1.2,255.255.255.252,1400,Transit
+R2,S0/0/1,10.2.2.1,255.255.255.252,1500,Transit
+R3,S0/0/1,10.2.2.2,255.255.255.252,1500,Far end
+R3,G0/1,192.168.3.1,255.255.255.0,1500,Destination LAN
+PC-A,NIC,192.168.1.3,255.255.255.0,1500,Reports the symptom
+Server,NIC,192.168.3.3,255.255.255.0,1500,The 'slow' application server

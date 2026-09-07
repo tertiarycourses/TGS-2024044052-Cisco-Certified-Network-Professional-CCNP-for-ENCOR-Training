@@ -1,0 +1,4 @@
+Device,Interface,IP Address,Subnet Mask,Default Gateway,Notes
+RTA,G0/0,172.16.1.1,255.255.255.0,N/A,Device being hardened
+SW1,VLAN 1,172.16.1.2,255.255.255.0,172.16.1.1,Also hardened
+PCA,NIC,172.16.1.10,255.255.255.0,172.16.1.1,Admin workstation

@@ -1,0 +1,41 @@
+{
+  "site": "Singapore HQ",
+  "collected": "2026-09-07T09:30:00Z",
+  "devices": [
+    {
+      "hostname": "R1-CORE",
+      "mgmt_ip": "10.1.1.1",
+      "platform": "ISR4451",
+      "uptime_days": 412,
+      "enabled": true,
+      "last_error": null,
+      "interfaces": [
+        { "name": "GigabitEthernet0/0/0", "ip": "10.1.1.1", "status": "up" },
+        { "name": "GigabitEthernet0/0/1", "ip": "192.168.1.1", "status": "up" }
+      ]
+    },
+    {
+      "hostname": "SW1-ACC",
+      "mgmt_ip": "10.1.2.11",
+      "platform": "C9200-24P",
+      "uptime_days": 198,
+      "enabled": true,
+      "last_error": null,
+      "interfaces": [
+        { "name": "GigabitEthernet1/0/1", "ip": null, "status": "up" },
+        { "name": "Vlan10", "ip": "10.1.2.11", "status": "up" }
+      ]
+    },
+    {
+      "hostname": "SW2-ACC",
+      "mgmt_ip": "10.1.2.12",
+      "platform": "C9200-24P",
+      "uptime_days": 0,
+      "enabled": false,
+      "last_error": "power supply fault",
+      "interfaces": [
+        { "name": "Vlan10", "ip": "10.1.2.12", "status": "down" }
+      ]
+    }
+  ]
+}

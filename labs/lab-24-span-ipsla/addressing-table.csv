@@ -1,0 +1,9 @@
+Device,Interface,IP Address,Subnet Mask,Role,Notes
+S1,F0/1,N/A,N/A,SPAN source,Server port being mirrored
+S1,F0/24,N/A,N/A,SPAN destination,Local analyser port
+S1,VLAN 199,N/A,N/A,RSPAN VLAN,Dedicated remote-span VLAN
+S2,F0/24,N/A,N/A,RSPAN destination,Analyser on the second switch
+R1,S0/0/0,209.165.200.225,255.255.255.0,IP SLA source,Probe source interface
+R2,G0/0,209.165.200.226,255.255.255.0,IP SLA target,Echo target
+Server,NIC,192.168.1.100,255.255.255.0,Monitored host,The capture subject
+Analyser,NIC,192.168.1.200,255.255.255.0,Analyser,Receives the mirrored traffic

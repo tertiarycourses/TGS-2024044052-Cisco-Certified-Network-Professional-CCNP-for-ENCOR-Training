@@ -1,0 +1,24 @@
+# WSQ assessment papers are CONFIDENTIAL — Google Drive only, never GitHub.
+assessment/
+
+# The assessment BUILDER carries every question and model answer inline, so it is
+# just as confidential as the papers it produces. Drive/local only.
+.claude/skills/wsq-assessment/
+
+# Secrets and internal links — never published
+.env
+*.pem
+*.key
+
+# OS / editor junk
+.DS_Store
+**/.DS_Store
+~$*
+*.tmp
+
+# Reference material (large third-party PDFs / PPTs, not ours to redistribute)
+reference/
+
+# Build artefacts
+__pycache__/
+*.pyc

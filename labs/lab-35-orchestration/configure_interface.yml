@@ -1,0 +1,41 @@
+---
+# Lab 35 - an idempotent Ansible playbook against Cisco IOS.
+#
+# Run it three ways and compare the PLAY RECAP each time:
+#   ansible-playbook -i inventory configure_interface.yml --check   (dry run)
+#   ansible-playbook -i inventory configure_interface.yml           (changed=1)
+#   ansible-playbook -i inventory configure_interface.yml           (changed=0)
+#
+# The second run reports changed=0 because the desired state already matches.
+# THAT is idempotency, and it is why a playbook is safe to re-run in production.
+
+- name: Configure the loopback interface on every Cisco device
+  hosts: cisco
+  gather_facts: false
+
+  tasks:
+    - name: Ensure Loopback100 exists with a description
+      cisco.ios.ios_interfaces:
+        config:
+          - name: Loopback100
+            description: "Managed by Ansible - do not edit by hand"
+            enabled: true
+        state: merged
+
+    - name: Ensure the loopback carries the right address
+      cisco.ios.ios_l3_interfaces:
+        config:
+          - name: Loopback100
+            ipv4:
+              - address: 10.255.255.1/32
+        state: merged
+
+    - name: Read back the interface state to prove the change
+      cisco.ios.ios_command:
+        commands:
+          - show ip interface brief | include Loopback100
+      register: result
+
+    - name: Show what the device reports
+      ansible.builtin.debug:
+        var: result.stdout_lines

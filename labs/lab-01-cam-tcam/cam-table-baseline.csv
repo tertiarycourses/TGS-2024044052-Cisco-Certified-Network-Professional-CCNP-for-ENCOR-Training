@@ -1,0 +1,6 @@
+VLAN,MAC Address,Type,Ports,Learned At
+10,000c.1234.5678,DYNAMIC,Fa0/1,after ping from PC-A
+10,000c.8765.4321,DYNAMIC,Fa0/2,after ping reply from PC-B
+10,000c.1234.5678,STATIC,Fa0/1,pinned manually in step 7
+All,0100.0ccc.cccc,STATIC,CPU,"CDP, always present"
+All,0180.c200.0000,STATIC,CPU,"STP, always present"

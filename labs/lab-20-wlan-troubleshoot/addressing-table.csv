@@ -1,0 +1,12 @@
+Device,Interface,IP Address,VLAN,Fault
+R1,G0/0/0.10,192.168.10.1/24,10,—
+R1,G0/0/0.20,192.168.20.1/24,20,—
+R1,G0/0/0.200,192.168.200.1/24,200,—
+R1,G0/0/1,172.31.1.1/24,N/A,—
+SW1,VLAN 200,192.168.200.100/24,200,—
+WLC-1,Management,192.168.200.254/24,200,—
+LAP-1,G0,DHCP,200,—
+RADIUS Server,NIC,172.31.1.254/24,N/A,Fault 3: shared secret mismatch
+Admin PC,NIC,192.168.200.200/24,200,—
+Laptop1,Wireless0,DHCP,10,Fault 1: cannot see the SSID
+Laptop2,Wireless0,DHCP,20,Fault 2: associates but no IP address

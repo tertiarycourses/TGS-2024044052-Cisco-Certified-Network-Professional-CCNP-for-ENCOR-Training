@@ -1,0 +1,8 @@
+Finding,Severity,What The Vendor Proposed,Why It Is Wrong,Required Fix
+1,Critical,API called over plain HTTP,Credentials and data are readable on the wire,Require HTTPS/TLS 1.2 or better
+2,Critical,Username and password embedded in the script,Anyone with the script has permanent access,Use a short-lived token or OAuth 2.0
+3,High,Token has no expiry,A leaked token is valid forever,Set a short TTL and refresh
+4,High,Integration uses a full-admin account,A read-only job holds write access,Scope the token to least privilege
+5,Medium,No rate limiting on the endpoint,A buggy loop or an attacker can exhaust the service,Enforce a rate limit and return 429
+6,Medium,Query built by string concatenation,Injection risk,Parameterise and validate server-side
+7,Medium,Token committed to the Git repository,Secret exposed in history forever,"Move to a secrets manager, rotate the token"

@@ -1,0 +1,11 @@
+HTTP Code,Class,Meaning,What Went Wrong,What To Do
+200,2xx Success,OK,Nothing - the request succeeded,Parse the response body
+201,2xx Success,Created,The resource was created,Read the Location header for its URI
+204,2xx Success,No Content,Succeeded with nothing to return,Common after a DELETE - treat as success
+400,4xx Client error,Bad Request,Malformed syntax or invalid JSON,Validate the payload before sending
+401,4xx Client error,Unauthorized,Token missing wrong or expired,Request a NEW TOKEN
+403,4xx Client error,Forbidden,Token is valid but the account lacks permission,Fix the account ROLE not the token
+404,4xx Client error,Not Found,The URI does not exist,Check the endpoint path and API version
+429,4xx Client error,Too Many Requests,You exceeded the rate limit,Back off and retry honouring Retry-After
+500,5xx Server error,Internal Server Error,The server failed,Retry - if persistent it is not your script
+503,5xx Server error,Service Unavailable,The service is down or overloaded,Retry with exponential backoff

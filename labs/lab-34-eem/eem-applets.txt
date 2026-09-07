@@ -1,0 +1,32 @@
+! ============================================================================
+! Lab 34 - EEM applets. Paste these into R1 in global configuration mode.
+! Note the action numbering: 1.0, 2.0, 3.0 - actions run in LEXICAL order,
+! so "10" would sort BEFORE "2". Always use the decimal convention.
+! ============================================================================
+
+! --- Applet 1: syslog-triggered diagnostic collection -----------------------
+event manager applet INTERFACE-DOWN
+ event syslog pattern "Interface Serial0/0/0, changed state to down"
+ action 1.0 cli command "enable"
+ action 2.0 cli command "show interfaces Serial0/0/0"
+ action 3.0 cli command "show ip route"
+ action 4.0 syslog msg "EEM: Serial0/0/0 down - diagnostics collected"
+
+! --- Applet 2: timed health snapshot ----------------------------------------
+event manager applet HEALTH-CHECK
+ event timer watchdog time 300
+ action 1.0 cli command "enable"
+ action 2.0 cli command "show processes cpu | include CPU"
+ action 3.0 syslog msg "EEM: periodic health snapshot taken"
+
+! --- Applet 3: record every configuration change ----------------------------
+event manager applet CONFIG-CHANGE
+ event syslog pattern "CONFIG_I"
+ action 1.0 cli command "enable"
+ action 2.0 cli command "show running-config"
+ action 3.0 syslog msg "EEM: running-config changed - snapshot taken"
+
+! --- Verify -----------------------------------------------------------------
+! show event manager policy registered
+! show event manager statistics policy
+! show logging | include EEM

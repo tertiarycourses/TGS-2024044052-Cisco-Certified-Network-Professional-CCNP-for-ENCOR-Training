@@ -1,0 +1,6 @@
+{
+  'site': 'Singapore HQ',
+  'devices': [
+    { 'hostname': 'R1-CORE' }
+  ]
+}

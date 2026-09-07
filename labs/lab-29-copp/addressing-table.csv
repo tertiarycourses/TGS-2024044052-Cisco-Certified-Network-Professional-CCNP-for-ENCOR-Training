@@ -1,0 +1,6 @@
+Device,Interface,IP Address,Subnet Mask,Role,Notes
+R1,G0/0,192.168.1.1,255.255.255.0,CoPP applied,Control plane protected
+R1,S0/0/0,10.1.1.1,255.255.255.252,OSPF adjacency,Must survive the flood
+R2,S0/0/0,10.1.1.2,255.255.255.252,Flood source,Generates the ICMP flood
+R2,G0/0,192.168.2.1,255.255.255.0,OSPF neighbour,Adjacency under test
+Admin PC,NIC,192.168.1.50,255.255.255.0,Management,SSH and SNMP source

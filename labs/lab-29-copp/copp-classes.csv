@@ -1,0 +1,5 @@
+Class,ACL,Matches,Police Rate (bps),Exceed Action,Rationale
+COPP-CRITICAL,120,"OSPF, EIGRP, BGP",512000,transmit,Routing must never be dropped — losing it is worse than any flood
+COPP-MANAGEMENT,121,"SSH (22), SNMP (161)",256000,drop,"Management matters, but not more than routing"
+COPP-ICMP,122,All ICMP,64000,drop,The usual flood vector — rate-limit it hard
+class-default,—,Everything else to the CPU,32000,drop,Catch-all backstop

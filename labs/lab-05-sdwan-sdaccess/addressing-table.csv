@@ -1,0 +1,10 @@
+Component,Plane,Address,Solution,Notes
+vBond-1,Orchestration,203.0.113.10,SD-WAN,Must be publicly reachable
+vSmart-1,Control,10.200.0.11,SD-WAN,Distributes OMP routes and policy
+vManage-1,Management,10.200.0.10,SD-WAN,"GUI, API and templates"
+cEdge-BR1,Data,10.201.1.1,SD-WAN,Branch 1 router
+cEdge-BR2,Data,10.201.2.1,SD-WAN,Branch 2 router
+DNAC-1,Management,10.100.0.10,SD-Access,Cisco DNA Center
+CP-Node-1,Control,10.100.1.1,SD-Access,LISP map server / map resolver
+Border-1,Border,10.100.1.2,SD-Access,Fabric border node
+Edge-1,Edge,10.100.1.11,SD-Access,Fabric edge node

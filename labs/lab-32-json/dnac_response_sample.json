@@ -1,0 +1,25 @@
+{
+  "response": [
+    {
+      "id": "a1b2c3d4-0000-4000-8000-000000000001",
+      "hostname": "leaf-01.example.local",
+      "managementIpAddress": "10.10.20.81",
+      "platformId": "C9300-48U",
+      "softwareVersion": "17.9.4",
+      "reachabilityStatus": "Reachable",
+      "role": "ACCESS",
+      "upTime": "48 days, 3:17:52.00"
+    },
+    {
+      "id": "a1b2c3d4-0000-4000-8000-000000000002",
+      "hostname": "border-01.example.local",
+      "managementIpAddress": "10.10.20.80",
+      "platformId": "C9500-40X",
+      "softwareVersion": "17.9.4",
+      "reachabilityStatus": "Reachable",
+      "role": "BORDER ROUTER",
+      "upTime": "112 days, 9:04:11.00"
+    }
+  ],
+  "version": "1.0"
+}

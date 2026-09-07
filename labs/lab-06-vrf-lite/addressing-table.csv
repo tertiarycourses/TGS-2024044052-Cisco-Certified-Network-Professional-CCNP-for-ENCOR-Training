@@ -1,0 +1,5 @@
+Device,Interface,VRF,IP Address,Subnet Mask,Notes
+R1,G0/0,CORP,192.168.1.1,255.255.255.0,"Overlapping prefix, corporate"
+R1,G0/1,GUEST,192.168.1.1,255.255.255.0,"Overlapping prefix, guest"
+CORP-PC,NIC,CORP,192.168.1.10,255.255.255.0,Gateway 192.168.1.1 in CORP
+GUEST-PC,NIC,GUEST,192.168.1.10,255.255.255.0,Gateway 192.168.1.1 in GUEST

@@ -1,0 +1,11 @@
+Device,Interface,IP Address,VLAN,Notes
+R-1,G0/0/1.5,192.168.5.1/24,5,Wireless client VLAN gateway
+R-1,G0/0/1.200,192.168.200.1/24,200,Management VLAN gateway
+R-1,G0/0/0,172.31.1.1/24,N/A,Server VLAN gateway
+SW-1,VLAN 200,192.168.200.100/24,200,Access switch management
+WLC-1,Management,192.168.200.254/24,200,Controller management interface
+WLC-1,Dynamic (VLAN 5),192.168.5.254/24,5,Wireless client interface
+LAP-1,G0,DHCP,200,Joins the WLC over CAPWAP
+RADIUS Server,NIC,172.31.1.254/24,N/A,WPA2-Enterprise authentication
+Admin PC,NIC,192.168.200.200/24,200,Runs the WLC GUI
+Wireless Host,Wireless NIC,DHCP,5,Guest and corporate test client

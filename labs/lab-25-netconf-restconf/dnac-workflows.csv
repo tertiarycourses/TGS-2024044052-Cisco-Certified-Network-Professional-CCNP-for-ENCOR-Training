@@ -1,0 +1,5 @@
+DNA Center Workflow,What It Does,Manual Task It Replaces,API Base Path
+Design,"Site hierarchy, network settings, IP pools, device credentials",Spreadsheets of site settings and per-device configuration,/dna/intent/api/v1/site
+Policy,"Virtual networks, group-based access control, SGTs, application policy",Hand-written ACLs on every device,/dna/intent/api/v1/policy
+Provision,"Push the design and policy to devices, assign devices to sites",Console cable and copy-paste per device,/dna/intent/api/v1/network-device
+Assurance,"Health scores, issues, path trace, client 360 and device 360",Reading syslog and running show commands by hand,/dna/intent/api/v1/assurance

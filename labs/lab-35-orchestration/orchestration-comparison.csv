@@ -1,0 +1,5 @@
+Tool,Architecture,Model,Transport,Port,Language,Agent Required on Device,Suitable for Cisco IOS,Notes
+Puppet,Master / agent,Pull,HTTPS,8140,Ruby DSL (manifests),Yes,No,Agent cannot be installed on IOS - ruled out by the constraint
+Chef,Server / client,Pull,HTTPS,443,Ruby (recipes and cookbooks),Yes,No,Agent cannot be installed on IOS - ruled out by the constraint
+Ansible,Control node only,Push,SSH / NETCONF / REST API,22 / 830 / 443,YAML (playbooks),No,Yes,AGENTLESS - the recommendation for 300 IOS devices
+SaltStack,Master / minion,Push,ZeroMQ (or SSH in salt-ssh mode),4505-4506 / 22,YAML (states),Yes by default,Only in salt-ssh mode,Agentless is possible but is not the default deployment

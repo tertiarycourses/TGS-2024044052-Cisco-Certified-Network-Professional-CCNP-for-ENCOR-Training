@@ -1,0 +1,4 @@
+Bundle,Symptom,Root Cause,Fix,Verify With
+Po1,One member port shows (s) suspended,Speed and duplex mismatch on F0/22,Match speed and duplex on both members,show interfaces status
+Po2,"Bundle shows (SD) down, no members bundled",Both ends configured LACP passive,Set one end to 'channel-group 2 mode active',show etherchannel summary
+Po3,"Bundle never forms, no negotiation","PAgP on S3, LACP on S2",Use the same protocol both ends,show etherchannel 3 detail
