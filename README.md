@@ -9,6 +9,8 @@ both CCNP Enterprise and CCIE Enterprise.
 
 **[Register for this course →](https://www.tertiarycourses.com.sg/wsq-cisco-certified-network-professional-ccnp-for-encor-training.html)**
 
+**Funding:** up to 70% course-fee funding for eligible learners and SMEs. Eligibility and terms apply — see the registration page.
+
 ---
 
 ## What learners can do by the end
